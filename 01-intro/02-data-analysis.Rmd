@@ -1,0 +1,99 @@
+---
+title: "Data Analysis"
+author: "Pablo Barbera, Dan Cervone"
+date: "March 30, 2016"
+output: html_document
+---
+
+### Reading data from a file
+
+Instead of creaing data frames "by hand", we can read them from files. The commost common types of files that can be easily imported into R are csv and txt files, although packages exist to read from Excel spreadsheets, JSON and XML files, as well as to parse HTML pages and query SQL, mongo, and other databases.
+
+For example, let's read in a csv file containing information on the posts published on the [Facebook page of the University of Copenhagen](https://www.facebook.com/UniversityOfCopenhagen).
+
+```{r}
+fb <- read.csv("../datasets/univ-cph-facebook.csv", stringsAsFactors=F) # double check working directory
+dim(fb) # dimensions of data set
+head(fb) # display first 5 rows
+```
+
+The `$` character allows us to access the `created_time` variable in `fb`, the data frame.
+
+
+```{r, eval=FALSE}
+fb$created_time
+fb$message[1]
+```
+
+We can manipulate variables as we would any other vector, such as the examples we saw previously.
+```{r}
+fb$log_likes <- log(fb$likes_count)
+```
+
+### Data cleaning
+
+Most data is *messy*. This means different things for different data sets, but some common examples include missing values, typos/errors, inconsistent formatting, or data that's in the wrong "shape". Generally speaking, data cleaning is the process of correcting issues that prevent data from being input into statistical, machine learning, or visualization algorithms.
+
+For example, imagine that we want to convert the date variable to year level, so that we can count the number of posts per year We can use the `substr` function -- it will extract specific characters from each value of this variable.
+
+```{r}
+fb$created_time[1]
+substr(fb$created_time[1], 1, 4)
+fb$year <- substr(fb$created_time, 1, 4)
+```
+
+### Summaries and descriptive statistics
+
+R has a variety of built-in functions to analyze data. Let's look at a few of these with examples from this dataset.
+
+- How many posts have been shared each year?
+
+```{r}
+table(fb$year) # frequency table
+```
+
+- How many likes do posts get on average?
+
+```{r}
+mean(fb$likes_count)
+summary(fb$likes_count)
+```
+
+- What percentage of posts have more than 25 likes?
+
+```{r}
+sum(fb$likes_count > 25) # posts with 25+ likes
+nrow(fb) # number of posts
+sum(fb$likes_count > 25) / nrow(fb)
+```
+
+Let's make a new data frame consisting of just posts that contain pictures.
+
+```{r}
+pictures <- fb[fb$type=="photo",]
+nrow(pictures) # how many rows in new data frame
+summary(pictures) # summarize all variables in data frame
+```
+
+### Data visualization
+
+Finally, although we will not have time to cover it today, R also has excellent tools to easily generate  plots.
+
+```{r}
+# what are the most common types of posts?
+barplot(table(fb$type))
+# what type of posts generates the most likes?
+require(ggplot2)
+p <- ggplot(fb, aes(y=likes_count, x=type))
+pq <- p + geom_boxplot() + scale_y_log10()
+pq
+# number of likes per month?
+fb$month <- paste0(substr(fb$created_time, 1, 7), '-01')
+agg <- aggregate(fb$likes_count, by=list(month=fb$month), FUN=sum)
+agg$month <- as.Date(agg$month)
+p <- ggplot(agg, aes(y=x, x=month))
+pq <- p + geom_point() + geom_line() +
+    scale_y_continuous("Total number of likes, per month")
+pq
+
+```
