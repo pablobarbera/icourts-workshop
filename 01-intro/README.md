@@ -19,7 +19,7 @@ We will be using [RStudio](https://www.rstudio.com/) to interact with R, and wri
 
 All the content of this session is contained in the following R+markdown scritps:
 
-- [Introduction to R and R Markdown](http://htmlpreview.github.io/?https://github.com/pablobarbera/icourts-workshop/blob/master/01-intro/00-setup.html) 
-- [First steps with R](http://htmlpreview.github.io/?https://github.com/pablobarbera/icourts-workshop/blob/master/01-intro/01-first-steps.html) 
-- [Reading and working with data in R](http://htmlpreview.github.io/?https://github.com/pablobarbera/icourts-workshop/blob/master/01-intro/02-data-analysis.html) 
-- [Basic programming with R](http://htmlpreview.github.io/?https://github.com/pablobarbera/icourts-workshop/blob/master/01-intro/03-basic-programming.html) 
+- [Introduction to R and R Markdown](https://cdn.rawgit.com/pablobarbera/icourts-workshop/master/01-intro/00-setup.html)
+- [First steps with R](https://cdn.rawgit.com/pablobarbera/icourts-workshop/blob/master/01-intro/01-first-steps.html) 
+- [Reading and working with data in R](https://cdn.rawgit.com/pablobarbera/icourts-workshop/blob/master/01-intro/02-data-analysis.html) 
+- [Basic programming with R](https://cdn.rawgit.com/pablobarbera/icourts-workshop/blob/master/01-intro/03-basic-programming.html) 
