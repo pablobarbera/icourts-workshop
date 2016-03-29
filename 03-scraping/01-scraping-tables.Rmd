@@ -1,0 +1,43 @@
+---
+title: "Scraping table data"
+author: "Pablo Barbera"
+date: "March 30, 2016"
+output: html_document
+---
+
+### Scraping web data in table format
+
+We will start by loading the `rvest` package, which will help us scrape data from the web.
+
+```{r, message=FALSE}
+#install.packages("rvest")
+library(rvest)
+```
+
+The goal of this exercise is to scrape a table with the list of international courts from Wikipedia. 
+
+The first step is to read the html code from the website we want to scrape, using the `read_html()` function. If we want to see the html in text format, we can then use `html_text()`.
+
+```{r}
+url <- 'https://en.wikipedia.org/wiki/International_court'
+html <- read_html(url) # reading the html code into memory
+html # not very informative
+substr(html_text(html), 1, 1000) # first 1000 characters
+```
+
+To extract all the tables in the html code automatically, we use `html_table()`. Note that it returns a list of data frames, so in order to work with this dataset, we will have to subset the first element of this list.
+
+```{r}
+tab <- html_table(html)
+str(tab)
+icourts <- tab[[1]]
+```
+
+And we can now see what scope is more common
+
+```{r}
+sort(table(icourts$Scope))
+```
+
+
+

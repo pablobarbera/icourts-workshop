@@ -7,5 +7,4 @@ All the content of this session is contained in the following R+markdown scripts
 
 - [Twitter](https://cdn.rawgit.com/pablobarbera/icourts-workshop/master/02-social-media/01-twitter.html)
 - [Facebook](https://cdn.rawgit.com/pablobarbera/icourts-workshop/master/02-social-media/02-facebook.html)
-- [Other APIs](https://cdn.rawgit.com/pablobarbera/icourts-workshop/master/02-social-media/03-apis.html)
 

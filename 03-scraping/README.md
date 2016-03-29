@@ -5,6 +5,7 @@
 
 All the content of this session is contained in the following R+markdown scripts:
 
-- [Scraping Tables](https://cdn.rawgit.com/pablobarbera/icourts-workshop/master/03-scraping/01-tables.html)
+- [Scraping Tables](https://cdn.rawgit.com/pablobarbera/icourts-workshop/master/03-scraping/01-scraping-tables.html)
 - [Scraping Unstructured Data](https://cdn.rawgit.com/pablobarbera/icourts-workshop/master/03-scraping/02-scraping-unstructured-data.html)
+- [Web APIs](https://cdn.rawgit.com/pablobarbera/icourts-workshop/master/03-scraping/03-apis.html)
 
