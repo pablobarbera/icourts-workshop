@@ -1,0 +1,859 @@
+{
+  "response": {
+    "meta": {
+      "hits": 5097,
+      "time": 74,
+      "offset": 0
+    },
+    "docs": [
+      {
+        "web_url": "http://www.nytimes.com/2016/02/24/world/europe/italy-court-faults-clerics-abduction.html",
+        "snippet": "The cleric, Hassan Mustafa Osama Nasr, was seized on a street in Milan by C.I.A. operatives in 2003 and flown to Egypt, where, he said, he was tortured for more than seven months.",
+        "lead_paragraph": "The cleric, Hassan Mustafa Osama Nasr, was seized on a street in Milan by C.I.A. operatives in 2003 and flown to Egypt, where, he said, he was tortured for more than seven months.",
+        "abstract": "European Court of Human Rights condemns Italy for its role in 2003 abduction of Egyptian Muslim cleric Hassan Mustafa Osama Nasr in Milan by CIA operatives.",
+        "print_page": "7",
+        "blog": [],
+        "source": "The New York Times",
+        "multimedia": [],
+        "headline": {
+          "main": "Italy: Court Faults Cleric&#8217;s Abduction",
+          "content_kicker": "World Briefing",
+          "print_headline": "Europe; Italy: Court Faults Cleric’s Abduction"
+        },
+        "keywords": [
+          {
+            "rank": "1",
+            "is_major": "Y",
+            "name": "glocations",
+            "value": "Italy"
+          },
+          {
+            "rank": "11",
+            "is_major": "N",
+            "name": "glocations",
+            "value": "Egypt"
+          },
+          {
+            "rank": "2",
+            "is_major": "Y",
+            "name": "organizations",
+            "value": "European Court of Human Rights"
+          },
+          {
+            "rank": "3",
+            "is_major": "Y",
+            "name": "subject",
+            "value": "Extraordinary Rendition"
+          },
+          {
+            "rank": "4",
+            "is_major": "Y",
+            "name": "persons",
+            "value": "Nasr, Hassan Mustafa Osama"
+          },
+          {
+            "rank": "5",
+            "is_major": "N",
+            "name": "organizations",
+            "value": "Central Intelligence Agency"
+          },
+          {
+            "rank": "6",
+            "is_major": "N",
+            "name": "subject",
+            "value": "Torture"
+          },
+          {
+            "rank": "7",
+            "is_major": "N",
+            "name": "subject",
+            "value": "Kidnapping and Hostages"
+          },
+          {
+            "rank": "8",
+            "is_major": "N",
+            "name": "subject",
+            "value": "Clergy"
+          },
+          {
+            "rank": "9",
+            "is_major": "N",
+            "name": "subject",
+            "value": "Human Rights and Human Rights Violations"
+          },
+          {
+            "rank": "10",
+            "is_major": "N",
+            "name": "glocations",
+            "value": "United States"
+          }
+        ],
+        "pub_date": "2016-02-24T00:00:00Z",
+        "document_type": "article",
+        "news_desk": "Foreign",
+        "section_name": "World",
+        "subsection_name": "Europe",
+        "byline": {
+          "contributor": "",
+          "person": [],
+          "original": "By REUTERS",
+          "organization": "REUTERS"
+        },
+        "type_of_material": "Brief",
+        "_id": "56ccfebb79881070245e0c5c",
+        "word_count": "117",
+        "slideshow_credits": null
+      },
+      {
+        "web_url": "http://www.nytimes.com/2016/01/06/world/europe/european-court-orders-russia-to-pay-damages-to-protester.html",
+        "snippet": "The European Court of Human Rights ruled in favor of a Russian man who was detained during a political rally in 2012 and who was sentenced to two weeks in jail for jaywalking.",
+        "lead_paragraph": "The European Court of Human Rights ruled in favor of a Russian man who was detained during a political rally in 2012 and who was sentenced to two weeks in jail for jaywalking.",
+        "abstract": "European Court of Human Rights rules in favor of Russian protester Yevgeniy Frumkin, who was sentenced to two weeks in jail for jaywalking at political rally in Moscow in 2012, and orders Russian government to pay Frumkin more than $30,000 in damages and expenses; says there was no way Frumkin could comply with police officer's demands given tight confines and large crowd of people.",
+        "print_page": "6",
+        "blog": [],
+        "source": "The New York Times",
+        "multimedia": [
+          {
+            "width": 190,
+            "url": "images/2016/01/06/world/06russia_web2/06russia_web2-thumbWide.jpg",
+            "height": 126,
+            "subtype": "wide",
+            "legacy": {
+              "wide": "images/2016/01/06/world/06russia_web2/06russia_web2-thumbWide.jpg",
+              "wideheight": "126",
+              "widewidth": "190"
+            },
+            "type": "image"
+          },
+          {
+            "width": 600,
+            "url": "images/2016/01/06/world/06russia_web2/06russia_web2-articleLarge.jpg",
+            "height": 387,
+            "subtype": "xlarge",
+            "legacy": {
+              "xlargewidth": "600",
+              "xlarge": "images/2016/01/06/world/06russia_web2/06russia_web2-articleLarge.jpg",
+              "xlargeheight": "387"
+            },
+            "type": "image"
+          },
+          {
+            "width": 75,
+            "url": "images/2016/01/06/world/06russia_web2/06russia_web2-thumbStandard.jpg",
+            "height": 75,
+            "subtype": "thumbnail",
+            "legacy": {
+              "thumbnailheight": "75",
+              "thumbnail": "images/2016/01/06/world/06russia_web2/06russia_web2-thumbStandard.jpg",
+              "thumbnailwidth": "75"
+            },
+            "type": "image"
+          }
+        ],
+        "headline": {
+          "main": "European Court Orders Russia to Pay Damages to Protester",
+          "print_headline": "Russia Is Ordered to Pay Damages to a Protester"
+        },
+        "keywords": [
+          {
+            "rank": "1",
+            "is_major": "Y",
+            "name": "glocations",
+            "value": "Russia"
+          },
+          {
+            "rank": "2",
+            "is_major": "Y",
+            "name": "subject",
+            "value": "Demonstrations, Protests and Riots"
+          },
+          {
+            "rank": "3",
+            "is_major": "Y",
+            "name": "persons",
+            "value": "Frumkin, Yevgeniy"
+          },
+          {
+            "rank": "4",
+            "is_major": "Y",
+            "name": "organizations",
+            "value": "European Court of Human Rights"
+          },
+          {
+            "rank": "5",
+            "is_major": "Y",
+            "name": "subject",
+            "value": "Human Rights and Human Rights Violations"
+          },
+          {
+            "rank": "6",
+            "is_major": "N",
+            "name": "persons",
+            "value": "Putin, Vladimir V"
+          },
+          {
+            "rank": "7",
+            "is_major": "N",
+            "name": "glocations",
+            "value": "Moscow (Russia)"
+          }
+        ],
+        "pub_date": "2016-01-06T00:00:00Z",
+        "document_type": "article",
+        "news_desk": "Foreign",
+        "section_name": "World",
+        "subsection_name": "Europe",
+        "byline": {
+          "person": [
+            {
+              "firstname": "Andrew",
+              "middlename": "E.",
+              "lastname": "KRAMER",
+              "rank": 1,
+              "role": "reported",
+              "organization": ""
+            }
+          ],
+          "original": "By ANDREW E. KRAMER"
+        },
+        "type_of_material": "News",
+        "_id": "568bcc6a7988106211705108",
+        "word_count": "548",
+        "slideshow_credits": null
+      },
+      {
+        "web_url": "http://www.nytimes.com/2010/12/28/world/europe/28libel.html",
+        "snippet": "A human rights figure who made accusations against Chechnya’s president in the death of Natalya K. Estemirova was himself put on trial, for defamation.",
+        "lead_paragraph": "A human rights figure who made accusations against Chechnya’s president in the death of Natalya K. Estemirova was himself put on trial, for defamation.",
+        "abstract": null,
+        "print_page": "1",
+        "blog": [],
+        "source": "The New York Times",
+        "multimedia": [
+          {
+            "width": 600,
+            "url": "images/2010/12/28/world/JP-LIBEL/JP-LIBEL-articleLarge.jpg",
+            "height": 370,
+            "subtype": "xlarge",
+            "legacy": {
+              "xlargewidth": "600",
+              "xlarge": "images/2010/12/28/world/JP-LIBEL/JP-LIBEL-articleLarge.jpg",
+              "xlargeheight": "370"
+            },
+            "type": "image"
+          },
+          {
+            "width": 75,
+            "url": "images/2010/12/28/world/JP-LIBEL/JP-LIBEL-thumbStandard.jpg",
+            "height": 75,
+            "subtype": "thumbnail",
+            "legacy": {
+              "thumbnailheight": "75",
+              "thumbnail": "images/2010/12/28/world/JP-LIBEL/JP-LIBEL-thumbStandard.jpg",
+              "thumbnailwidth": "75"
+            },
+            "type": "image"
+          }
+        ],
+        "headline": {
+          "seo": "Russian Accuser Becomes the Accused - Above the Law",
+          "main": "In Russia, an Advocate Is Killed, and an Accuser Tried",
+          "content_kicker": "Part IX: An Official’s Long Reach",
+          "kicker": "Part IX: An Official’s Long Reach",
+          "print_headline": "In Murder of Rights Advocate,\nRussia Goes in Pursuit of Critic"
+        },
+        "keywords": [
+          {
+            "rank": "1",
+            "is_major": "N",
+            "name": "persons",
+            "value": "Estemirova, Natalya"
+          },
+          {
+            "rank": "2",
+            "is_major": "N",
+            "name": "persons",
+            "value": "Orlov, Oleg P"
+          },
+          {
+            "rank": "3",
+            "is_major": "N",
+            "name": "persons",
+            "value": "Kadyrov, Ramzan"
+          },
+          {
+            "rank": "4",
+            "is_major": "N",
+            "name": "subject",
+            "value": "Murders and Attempted Murders"
+          },
+          {
+            "rank": "5",
+            "is_major": "N",
+            "name": "subject",
+            "value": "Human Rights and Human Rights Violations"
+          },
+          {
+            "rank": "6",
+            "is_major": "N",
+            "name": "subject",
+            "value": "Libel and Slander"
+          },
+          {
+            "rank": "7",
+            "is_major": "N",
+            "name": "subject",
+            "value": "War Crimes, Genocide and Crimes Against Humanity"
+          },
+          {
+            "rank": "8",
+            "is_major": "N",
+            "name": "organizations",
+            "value": "European Court of Human Rights"
+          },
+          {
+            "rank": "9",
+            "is_major": "N",
+            "name": "persons",
+            "value": "Putin, Vladimir V"
+          },
+          {
+            "rank": "10",
+            "is_major": "N",
+            "name": "glocations",
+            "value": "Russia"
+          }
+        ],
+        "pub_date": "2010-12-28T00:00:00Z",
+        "document_type": "article",
+        "news_desk": "Foreign",
+        "section_name": "World",
+        "subsection_name": "Europe",
+        "byline": {
+          "contributor": "",
+          "person": [
+            {
+              "firstname": "Clifford",
+              "middlename": "J.",
+              "lastname": "LEVY",
+              "rank": 1,
+              "role": "reported",
+              "organization": ""
+            }
+          ],
+          "original": "By CLIFFORD J. LEVY"
+        },
+        "type_of_material": "News",
+        "_id": "540ebafd79881045f37917c1",
+        "word_count": "1915",
+        "slideshow_credits": null
+      },
+      {
+        "web_url": "http://www.nytimes.com/2013/07/10/world/europe/10iht-britain10.html",
+        "snippet": "The European Court of Human Rights said there should be a review of the three men's sentences, with the possibility that they could be freed.",
+        "lead_paragraph": "The European Court of Human Rights said there should be a review of the three men's sentences, with the possibility that they could be freed.",
+        "abstract": "European Court of Human Rights in Strasbourg, France, rules 16 to 1 that life sentences Great Britain handed to three convicted murderers amount to inhuman and degrading treatment because they have no hope of release; ruling deals blow to Britain and is one of several that have annoyed its dominant Conservative Party.",
+        "print_page": "6",
+        "blog": [],
+        "source": "The New York Times",
+        "multimedia": [],
+        "headline": {
+          "main": "Court Rules Against Britain in Life Terms for 3 Convicts",
+          "print_headline": "Court Finds\r\nLife Terms\r\nIn Britain\r\nDegrading"
+        },
+        "keywords": [
+          {
+            "rank": "1",
+            "is_major": "Y",
+            "value": "European Court of Human Rights",
+            "name": "organizations"
+          },
+          {
+            "rank": "2",
+            "is_major": "Y",
+            "value": "Great Britain",
+            "name": "glocations"
+          },
+          {
+            "rank": "3",
+            "is_major": "N",
+            "value": "Prisons and Prisoners",
+            "name": "subject"
+          },
+          {
+            "rank": "4",
+            "is_major": "N",
+            "value": "Human Rights and Human Rights Violations",
+            "name": "subject"
+          },
+          {
+            "rank": "5",
+            "is_major": "Y",
+            "value": "Sentences (Criminal)",
+            "name": "subject"
+          }
+        ],
+        "pub_date": "2013-07-09T00:00:00Z",
+        "document_type": "article",
+        "news_desk": "Foreign",
+        "section_name": "World",
+        "subsection_name": "Europe",
+        "byline": {
+          "contributor": "",
+          "person": [
+            {
+              "organization": "",
+              "role": "reported",
+              "firstname": "Stephen",
+              "rank": 1,
+              "lastname": "CASTLE"
+            }
+          ],
+          "original": "By STEPHEN CASTLE"
+        },
+        "type_of_material": "News",
+        "_id": "51dc73fd7988106fb966993a",
+        "word_count": "613",
+        "slideshow_credits": null
+      },
+      {
+        "web_url": "http://www.nytimes.com/2014/07/02/world/europe/france-european-rights-court-upholds-french-ban-on-veils.html",
+        "snippet": "The European Court of Human Rights has upheld a French ban on wearing face-covering veils in public, rejecting arguments that the measure violates religious freedoms.",
+        "lead_paragraph": "The European Court of Human Rights has upheld a French ban on wearing face-covering veils in public, rejecting arguments that the measure violates religious freedoms.",
+        "abstract": "European Court of Human Rights upholds French ban on wearing face-covering veils in public, rejecting arguments that measure violates religious freedoms and bolstering opponents of strict Islamic dress in other parts of Europe.",
+        "print_page": "9",
+        "blog": [],
+        "source": "The New York Times",
+        "multimedia": [],
+        "headline": {
+          "main": "France: European Rights Court Upholds French Ban on Veils",
+          "print_headline": "France: European Rights Court Upholds French Ban on Veils",
+          "content_kicker": "World Briefing"
+        },
+        "keywords": [
+          {
+            "rank": "4",
+            "is_major": "N",
+            "value": "Freedom of Religion",
+            "name": "subject"
+          },
+          {
+            "rank": "2",
+            "is_major": "Y",
+            "value": "Muslim Veiling",
+            "name": "subject"
+          },
+          {
+            "rank": "5",
+            "is_major": "Y",
+            "value": "European Court of Human Rights",
+            "name": "organizations"
+          },
+          {
+            "rank": "7",
+            "is_major": "N",
+            "value": "Belgium",
+            "name": "glocations"
+          },
+          {
+            "rank": "1",
+            "is_major": "N",
+            "value": "Human Rights and Human Rights Violations",
+            "name": "subject"
+          },
+          {
+            "rank": "6",
+            "is_major": "Y",
+            "value": "France",
+            "name": "glocations"
+          },
+          {
+            "rank": "3",
+            "is_major": "N",
+            "value": "Discrimination",
+            "name": "subject"
+          }
+        ],
+        "pub_date": "2014-07-02T00:00:00Z",
+        "document_type": "article",
+        "news_desk": "Foreign",
+        "section_name": "World",
+        "subsection_name": "Europe",
+        "byline": {
+          "contributor": "",
+          "person": [
+            {
+              "organization": "",
+              "role": "reported",
+              "firstname": "Alan",
+              "rank": 1,
+              "lastname": "COWELL"
+            }
+          ],
+          "original": "By ALAN COWELL"
+        },
+        "type_of_material": "Brief",
+        "_id": "53b37e8b798810574695b6f1",
+        "word_count": "166",
+        "slideshow_credits": null
+      },
+      {
+        "web_url": "http://www.nytimes.com/2014/10/29/world/europe/britain-setback-for-public-nudity.html",
+        "snippet": "A British man nicknamed the Naked Rambler has lost a legal bid to have public nudity declared a human right.",
+        "lead_paragraph": "A British man nicknamed the Naked Rambler has lost a legal bid to have public nudity declared a human right.",
+        "abstract": null,
+        "print_page": "",
+        "blog": [],
+        "source": "The New York Times",
+        "multimedia": [],
+        "headline": {
+          "main": "Britain: Setback for Public Nudity",
+          "print_headline": "Britain: Setback for Public Nudity",
+          "content_kicker": "World Briefing"
+        },
+        "keywords": [
+          {
+            "value": "Great Britain",
+            "is_major": "N",
+            "rank": "1",
+            "name": "glocations"
+          },
+          {
+            "value": "European Court of Human Rights",
+            "is_major": "N",
+            "rank": "2",
+            "name": "organizations"
+          },
+          {
+            "value": "Human Rights and Human Rights Violations",
+            "is_major": "N",
+            "rank": "3",
+            "name": "subject"
+          }
+        ],
+        "pub_date": "2014-10-29T00:00:00Z",
+        "document_type": "article",
+        "news_desk": "Foreign",
+        "section_name": "World",
+        "subsection_name": "Europe",
+        "byline": {
+          "person": [],
+          "original": "By THE ASSOCIATED PRESS",
+          "organization": "THE ASSOCIATED PRESS"
+        },
+        "type_of_material": "Brief",
+        "_id": "5450252e7988107738c7d549",
+        "word_count": "91",
+        "slideshow_credits": null
+      },
+      {
+        "web_url": "http://www.nytimes.com/2012/11/13/world/europe/britain-radical-cleric-wins-deportation-appeal.html",
+        "snippet": "An immigration appeals tribunal ruled that sending a militant Islamic preacher to Jordan to face terrorism charges would violate his right to a fair trial under European human rights law.",
+        "lead_paragraph": "An immigration appeals tribunal ruled that sending a militant Islamic preacher to Jordan to face terrorism charges would violate his right to a fair trial under European human rights law.",
+        "abstract": "British immigration appeals tribunal rules that sending militant Islamic preacher Omar Mahmoud Mohammed Othman to Jordan to face terrorism charges violates his right to fair trial under European human rights law; orders him released from prison under tight bail conditions; government officials say they will appeal ruling.",
+        "print_page": "10",
+        "blog": [],
+        "source": "The New York Times",
+        "multimedia": [],
+        "headline": {
+          "main": "Britain: Radical Cleric Wins Deportation Appeal",
+          "print_headline": "Britain: Radical Cleric Wins Deportation Appeal",
+          "content_kicker": "World Briefing | Europe"
+        },
+        "keywords": [
+          {
+            "rank": "1",
+            "is_major": "Y",
+            "value": "Great Britain",
+            "name": "glocations"
+          },
+          {
+            "rank": "2",
+            "is_major": "N",
+            "value": "Terrorism",
+            "name": "subject"
+          },
+          {
+            "rank": "3",
+            "is_major": "Y",
+            "value": "Othman, Omar Mahmoud Mohammed",
+            "name": "persons"
+          },
+          {
+            "rank": "4",
+            "is_major": "Y",
+            "value": "Jordan",
+            "name": "glocations"
+          },
+          {
+            "rank": "5",
+            "is_major": "Y",
+            "value": "Deportation",
+            "name": "subject"
+          },
+          {
+            "rank": "6",
+            "is_major": "N",
+            "value": "Human Rights and Human Rights Violations",
+            "name": "subject"
+          },
+          {
+            "rank": "7",
+            "is_major": "N",
+            "value": "European Court of Human Rights",
+            "name": "organizations"
+          },
+          {
+            "rank": "8",
+            "is_major": "N",
+            "value": "Muslims and Islam",
+            "name": "subject"
+          }
+        ],
+        "pub_date": "2012-11-13T00:00:00Z",
+        "document_type": "article",
+        "news_desk": "Foreign",
+        "section_name": "World",
+        "subsection_name": "Europe",
+        "byline": {
+          "contributor": "",
+          "person": [
+            {
+              "firstname": "John",
+              "middlename": "F.",
+              "lastname": "BURNS",
+              "rank": 1,
+              "role": "reported",
+              "organization": ""
+            }
+          ],
+          "original": "By JOHN F. BURNS"
+        },
+        "type_of_material": "Brief",
+        "_id": "50a1a00100315214fbb7a131",
+        "word_count": "200",
+        "slideshow_credits": null
+      },
+      {
+        "web_url": "http://www.nytimes.com/2013/05/01/world/europe/tymoshenko-ukraines-jailed-ex-premier-gets-decision-in-her-favor.html",
+        "snippet": "The ruling by the European Court of Human Rights does not oblige Ukraine’s judicial system to release former Prime Minister Yulia V. Tymoshenko.",
+        "lead_paragraph": "The ruling by the European Court of Human Rights does not oblige Ukraine’s judicial system to release former Prime Minister Yulia V. Tymoshenko.",
+        "abstract": "European Court of Human Rights in Strasbourg, France, rules that 2011 arrest of former Ukrainian Prime Min Yulia V Tymoshenko on charges of abuse of power was illegal and politically motivated; ruling is first significant legal decision in Tymoshenko's favor, but does not oblige Ukraine to order her release.",
+        "print_page": "6",
+        "blog": [],
+        "source": "The New York Times",
+        "multimedia": [],
+        "headline": {
+          "seo": "Tymoshenko, Ukraine’s Jailed Ex-Premier, Gets Decision in Her Favor",
+          "main": "Jailed Official in Ukraine Gets Decision in Her Favor",
+          "print_headline": "Ruling Favors Ex-Premier Who Is Jailed In Ukraine"
+        },
+        "keywords": [
+          {
+            "rank": "1",
+            "is_major": "Y",
+            "value": "Tymoshenko, Yulia V",
+            "name": "persons"
+          },
+          {
+            "rank": "2",
+            "is_major": "N",
+            "value": "Sentences (Criminal)",
+            "name": "subject"
+          },
+          {
+            "rank": "3",
+            "is_major": "N",
+            "value": "Human Rights and Human Rights Violations",
+            "name": "subject"
+          },
+          {
+            "rank": "4",
+            "is_major": "N",
+            "value": "European Court of Human Rights",
+            "name": "organizations"
+          },
+          {
+            "rank": "5",
+            "is_major": "N",
+            "value": "Yanukovich, Viktor F",
+            "name": "persons"
+          },
+          {
+            "rank": "6",
+            "is_major": "N",
+            "value": "Prisons and Prisoners",
+            "name": "subject"
+          },
+          {
+            "rank": "7",
+            "is_major": "N",
+            "value": "Courts and the Judiciary",
+            "name": "subject"
+          },
+          {
+            "rank": "8",
+            "is_major": "Y",
+            "value": "Ukraine",
+            "name": "glocations"
+          },
+          {
+            "rank": "9",
+            "is_major": "N",
+            "value": "Russia",
+            "name": "glocations"
+          }
+        ],
+        "pub_date": "2013-05-01T00:00:00Z",
+        "document_type": "article",
+        "news_desk": "Foreign",
+        "section_name": "World",
+        "subsection_name": "Europe",
+        "byline": {
+          "contributor": "",
+          "person": [
+            {
+              "firstname": "Andrew",
+              "middlename": "E.",
+              "lastname": "KRAMER",
+              "rank": 1,
+              "role": "reported",
+              "organization": ""
+            }
+          ],
+          "original": "By ANDREW E. KRAMER"
+        },
+        "type_of_material": "News",
+        "_id": "51805968fdc5920bc40020ce",
+        "word_count": "730",
+        "slideshow_credits": null
+      },
+      {
+        "web_url": "http://www.nytimes.com/2013/01/09/world/europe/italy-court-condemns-italian-jails.html",
+        "snippet": "The European Court of Human Rights ruled Tuesday that Italy’s prisons violated inmates’ basic rights and fined the government $130,000. It also ordered Italy to make improvements within a year.",
+        "lead_paragraph": "The European Court of Human Rights ruled Tuesday that Italy’s prisons violated inmates’ basic rights and fined the government $130,000. It also ordered Italy to make improvements within a year.",
+        "abstract": "European Court of Human Rights rules that Italy's prisons violate inmates' basic rights and fines government $130,000; ruling relates to 2009 case brought by seven inmates.",
+        "print_page": "6",
+        "blog": [],
+        "source": "The New York Times",
+        "multimedia": [],
+        "headline": {
+          "seo": "Italy: Court Condemns Italian Jails",
+          "main": "Italy: Court Condemns Italian Jails",
+          "print_headline": "Italy: Court Condemns Italian Jails",
+          "content_kicker": "World Briefing | Europe"
+        },
+        "keywords": [
+          {
+            "rank": "1",
+            "is_major": "N",
+            "value": "Human Rights and Human Rights Violations",
+            "name": "subject"
+          },
+          {
+            "rank": "2",
+            "is_major": "Y",
+            "value": "Prisons and Prisoners",
+            "name": "subject"
+          },
+          {
+            "rank": "3",
+            "is_major": "Y",
+            "value": "Italy",
+            "name": "glocations"
+          },
+          {
+            "rank": "4",
+            "is_major": "Y",
+            "value": "European Court of Human Rights",
+            "name": "organizations"
+          }
+        ],
+        "pub_date": "2013-01-09T00:00:00Z",
+        "document_type": "article",
+        "news_desk": "Foreign",
+        "section_name": "World",
+        "subsection_name": "Europe",
+        "byline": {
+          "contributor": "",
+          "person": [],
+          "original": "By THE ASSOCIATED PRESS",
+          "organization": "THE ASSOCIATED PRESS"
+        },
+        "type_of_material": "Brief",
+        "_id": "50ed280700315214fbb831eb",
+        "word_count": "108",
+        "slideshow_credits": null
+      },
+      {
+        "web_url": "http://www.nytimes.com/2011/03/26/world/europe/26spain.html",
+        "snippet": "Interights, which is based in London, filed the suit with the European Court of Human Rights in Strasbourg, France, on behalf of Judge Baltasar Garzón.",
+        "lead_paragraph": "Interights, which is based in London, filed the suit with the European Court of Human Rights in Strasbourg, France, on behalf of Judge Baltasar Garzón.",
+        "abstract": null,
+        "print_page": "5",
+        "blog": [],
+        "source": "The New York Times",
+        "multimedia": [],
+        "headline": {
+          "main": "Suit Filed on Behalf of Spanish Judge",
+          "print_headline": "Suit Filed on Behalf of Spanish Judge"
+        },
+        "keywords": [
+          {
+            "rank": "1",
+            "is_major": "N",
+            "value": "Spanish Civil War (1936-39)",
+            "name": "subject"
+          },
+          {
+            "rank": "2",
+            "is_major": "N",
+            "value": "Politics and Government",
+            "name": "subject"
+          },
+          {
+            "rank": "3",
+            "is_major": "N",
+            "value": "Human Rights and Human Rights Violations",
+            "name": "subject"
+          },
+          {
+            "rank": "4",
+            "is_major": "N",
+            "value": "European Court of Human Rights",
+            "name": "organizations"
+          },
+          {
+            "rank": "5",
+            "is_major": "N",
+            "value": "Garzon, Baltasar",
+            "name": "persons"
+          },
+          {
+            "rank": "6",
+            "is_major": "N",
+            "value": "Spain",
+            "name": "glocations"
+          }
+        ],
+        "pub_date": "2011-03-26T00:00:00Z",
+        "document_type": "article",
+        "news_desk": "Foreign",
+        "section_name": "World",
+        "subsection_name": "Europe",
+        "byline": {
+          "contributor": "",
+          "person": [],
+          "original": "By THE ASSOCIATED PRESS",
+          "organization": "THE ASSOCIATED PRESS"
+        },
+        "type_of_material": "News",
+        "_id": "540c248a7988105a10ca8e09",
+        "word_count": "459",
+        "slideshow_credits": null
+      }
+    ]
+  },
+  "status": "OK",
+  "copyright": "Copyright (c) 2013 The New York Times Company.  All Rights Reserved."
+}

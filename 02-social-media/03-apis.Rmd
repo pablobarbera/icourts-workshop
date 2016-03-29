@@ -8,7 +8,7 @@ output: html_document
 ### Scraping web data from APIs
 
 To understand how APIs work, we'll take the New York Times API as an example. This API allows users to search articles by string and dates, and returns counts of articles and a short description of each article (but not the full text). You can find the documentation [here](http://developer.nytimes.com/docs/read/article_search_api_v2). Get a new API token and paste it here:
-```{r, eval=FALSE}
+```{r}
 apikey <- '05e7c6c6f4896fba6c08531808067326:10:67731177'
 ```
 
@@ -18,7 +18,7 @@ The fist step is to identify the base url and the parameters that we can use to 
 base_url <- "http://api.nytimes.com/svc/search/v2/articlesearch.json"
 # install.packages("httr")
 library(httr)
-r <- GET(base_url, query=list(q="human rights","api-key"=apikey))
+r <- GET(base_url, query=list(q="european court of human rights","api-key"=apikey))
 r
 ```
 
@@ -47,15 +47,15 @@ json$response$meta # metadata
 If we check the documentation, we find that we can subset by date with the `begin_date` and `end_date` parameters. Let's see how this works...
 
 ```{r}
-r <- GET(base_url, query=list(q="international criminal court",
+r <- GET(base_url, query=list(q="european court of human rights",
                               "api-key"=apikey,
-                              "begin_date"=20140101,
-                              "end_date"=20141231))
+                              "begin_date"=20120101,
+                              "end_date"=20121231))
 json <- content(r, 'parsed')
 json$response$meta
 ```
 
-Between these two dates, there were 8,780 articles in the NYT mentioning "human rights".
+Between these two dates, there were 180 articles in the NYT mentioning "european court of human rights".
 
 Now imagine we want to look at the evolution of mentions of this word over time. Following the best coding practices we introduced the first day, we want to write a function that will take a word and a set of dates as arguments and return the counts of articles.
 
@@ -71,7 +71,7 @@ nyt_count <- function(q, date1, date2){
   return(json$response$meta$hits)
 }
 
-nyt_count(q="international criminal court", date1=20160101, date2=20160122)
+nyt_count(q="european court of human rights", date1=20160101, date2=20160122)
 ```
 
 Ok, so this seems to work. But we want to run this function multiple times, so let's write another function that helps us do that.
@@ -94,7 +94,7 @@ nyt_years_count <- function(q, yearinit, yearend){
 ```
 ```{r, eval=FALSE}
 # and let's see what happens...
-nyt_years_count(q="international criminal court", yearinit=1950, yearend=2014)
+nyt_years_count(q="international criminal court", yearinit=1950, yearend=2012)
 ```
 
 Oops! What happened? Why the error? We're querying the API too fast. Let's modify the function to add a `while` loop that will wait a couple of seconds in case there's an error:
@@ -124,8 +124,8 @@ nyt_count <- function(q, date1, date2){
 And let's see if this does the trick...
 
 ```{r}
-counts <- nyt_years_count(q="european court of human rights", yearinit=1950, yearend=2014)
-plot(1950:2014, counts, type="l", main="Mentions of ECHR on the NYT, by year",
+counts <- nyt_years_count(q="european court of human rights", yearinit=1950, yearend=2012)
+plot(1950:2012, counts, type="l", main="Mentions of ECHR on the NYT, by year",
      xlab="Year", ylab="Article count")
 ```
 
@@ -154,7 +154,7 @@ nyt_dates_count <- function(q, init, end, by){
 
 And now we can count articles at the month level...
 ```{r}
-counts <- nyt_dates_count(q="karadzic", init = as.Date("2014/01/01"), end = as.Date("2016/03/30"), by="month")
+counts <- nyt_dates_count(q="karadzic", init = as.Date("2012/01/01"), end = as.Date("2016/03/30"), by="month")
 plot(counts$date, counts$count, type="l", main="Mentions of 'karadzic' in the NYT, by month",
      xlab="Month", ylab="Article count")
 ```

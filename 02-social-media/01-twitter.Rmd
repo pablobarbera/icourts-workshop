@@ -68,12 +68,17 @@ str(tweets)
 tweets[1,]
 ```
 
+If we want, we could also export it to a csv file to be opened later with Excel
+```{r}
+write.csv(tweets, file="brexit-tweets.csv", row.names=FALSE)
+```
+
 And this is how we would capture tweets mentioning multiple keywords:
 ```{r, eval=FALSE}
 filterStream(file.name="uk-tweets.json", 
 	track=c("#brexit", "#LeaveEU", "#StrongerIn", "#VoteLeave", "#EU", "#EURef",
 	        "referendum"),
-    tweets=50, oauth=my_oauth)
+    tweets=30, oauth=my_oauth)
 ```
 
 Note that here I choose a different option, `tweets`, which indicates how many tweets (approximately) the function should capture before we close the connection to the Twitter API.
@@ -84,53 +89,42 @@ For example, imagine we want to collect tweets from the United States. The way t
 
 In the case of Denmark, it would be approx. (7.4, 54.3) and (14.8, 57.7). How to find these coordinates? I use: `http://itouchmap.com/latlong.html`
 
-```{r}
+```{r, eval=FALSE}
 filterStream(file.name="tweets_geo.json", locations=c(7.4, 54.3, 14.8, 57.7), 
-    timeout=30, oauth=my_oauth)
+    timeout=1800, oauth=my_oauth)
 ```
 
 We can do as before and open the tweets in R
 ```{r}
-tweets <- parseTweets("tweets_geo.json")
+tweets <- parseTweets("../tweets_geo.json")
 ```
 
 And use the maps library to see where most tweets are coming from. Note that there are two types of geographic information on tweets: `lat`/`lon` (from geolocated tweets) and `place_lat` and `place_lon` (from tweets with place information). We will work with whatever is available.
 ```{r}
 library(maps)
+library(mapdata)
 tweets$lat <- ifelse(is.na(tweets$lat), tweets$place_lat, tweets$lat)
 tweets$lon <- ifelse(is.na(tweets$lon), tweets$place_lon, tweets$lon)
-states <- map.where("world", tweets$lon, tweets$lat)
-head(sort(table(states), decreasing=TRUE))
+countries <- map.where("worldHires", tweets$lon, tweets$lat)
+head(sort(table(countries), decreasing=TRUE))
 ```
 
 We can also prepare a map of the exact locations of the tweets.
 
 ```{r, fig.height=6, fig.width=10}
-#install.packages("ggplot2")
-library(ggplot2)
+# subset only tweets in Denmark
+tweets <- tweets[countries=="Denmark" | is.na(countries),]
 
-## First create a data frame with the map data 
-map.data <- map_data("world")
+#if(!require("devtools")) install.packages("devtools")
+#devtools::install_github("sebastianbarfort/mapDK")
+library(mapDK)
+pointDK(tweets, point.colour="blue", map.fill="gray98", map.colour="grey20")
 
-# And we use ggplot2 to draw the map:
-# 1) map base
-ggplot(map.data) + geom_map(aes(map_id = region), map = map.data, fill = "grey90", 
-    color = "grey50", size = 0.25) + expand_limits(x = map.data$long, y = map.data$lat) + 
-    # 2) limits for x and y axis
-    scale_x_continuous(limits=c(52, 57)) + scale_y_continuous(limits=c(7, 16)) +
-    # 3) adding the dot for each tweet
-    geom_point(data = tweets, 
-    aes(x = lon, y = lat), size = 1, alpha = 1/5, color = "darkblue") +
-    # 4) removing unnecessary graph elements
-    theme(axis.line = element_blank(), 
-    	axis.text = element_blank(), 
-    	axis.ticks = element_blank(), 
-        axis.title = element_blank(), 
-        panel.background = element_blank(), 
-        panel.border = element_blank(), 
-        panel.grid.major = element_blank(), 
-        panel.grid.minor = element_blank(), 
-        plot.background = element_blank()) 
+# and only tweets in Copenhagen
+cph <- tweets[tweets$lat > 55 & tweets$lat<56 & tweets$lon>12 & tweets$lon<12.7,]
+pointDK(cph, sub = "koebenhavn", point.colour="blue", map.fill="gray98", map.colour="grey20")
+
+
 ```
 
 
@@ -176,10 +170,18 @@ library(smappR)
 
 searchTweets(q=c("karadžić", "karadzic", "Караџић"), 
   filename="karadzic-tweets.json",
-  n=200, until="2016-01-20", 
+  n=1000, until="2016-03-25", 
   oauth_folder="~/git/icourts-workshop/02-social-media/credentials")
 
 tweets <- parseTweets("karadzic-tweets.json")
+```
+
+What are the most popular hashtags?
+```{r}
+library(stringr)
+ht <- str_extract_all(tweets$text, "#(\\d|\\w)+")
+ht <- unlist(ht)
+head(sort(table(ht), decreasing = TRUE))
 ```
 
 You can check the documentation about the options for string search [here](https://dev.twitter.com/rest/public/search).
@@ -191,7 +193,7 @@ ics <- c("IntlCrimCourt", "ICJ_org", "CorteIDH", "CIDH", "ComunidadAndina",
          "ECHR_Press", "ICTYnews", "SpecialCourt", "EACJCourt", 
          "EUCourtPress", "CourUEPresse", "TPRMERCOSUR", "afchpr")
 users <- getUsersBatch(screen_names=ics,
-                       oauth_folder="~/git/icours-workshop/02-social-media/credentials")
+                       oauth_folder="~/git/icourts-workshop/02-social-media/credentials")
 str(users)
 ```
 
@@ -203,7 +205,7 @@ users[which.max(users$followers_count),]
 Download up to 3,200 recent tweets from a Twitter account:
 ```{r}
 getTimeline(filename="ECHR-tweets.json", screen_name="ECHR_Press", 
-    n=1000, oauth_folder="~/git/data-science-workshop/scraping/credentials")
+    n=1000, oauth_folder="~/git/icourts-workshop/02-social-media/credentials")
 ```
 
 What are the most common hashtags?
@@ -217,7 +219,7 @@ head(sort(table(ht), decreasing = TRUE))
 Download friends and followers:
 ```{r}
 followers <- getFollowers("ICTYnews", 
-    oauth_folder="~/git/icourts-workshop/02-social-media/credentials")
+    oauth_folder="~/Dropbox/credentials/twitter")
 ```
 
 What are the most common words that followers of the International Criminal Tribunal for the Former Yugoslavia use to describe themselves on Twitter?
@@ -226,7 +228,7 @@ What are the most common words that followers of the International Criminal Trib
 smp <- sample(followers, 1000) 
 # extract profile descriptions
 users <- getUsersBatch(ids=smp,
-    oauth_folder="~/git/icourts-workshop/02-socia-media/credentials")
+    oauth_folder="~/Dropbox/credentials/twitter")
 # create table with frequency of word use
 library(quanteda)
 tw <- corpus(users$description[users$description!=""])
