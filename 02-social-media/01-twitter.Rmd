@@ -96,7 +96,7 @@ filterStream(file.name="tweets_geo.json", locations=c(7.4, 54.3, 14.8, 57.7),
 
 We can do as before and open the tweets in R
 ```{r}
-tweets <- parseTweets("../tweets_geo.json")
+tweets <- parseTweets("../datasets/tweets_geo.json")
 ```
 
 And use the maps library to see where most tweets are coming from. Note that there are two types of geographic information on tweets: `lat`/`lon` (from geolocated tweets) and `place_lat` and `place_lon` (from tweets with place information). We will work with whatever is available.

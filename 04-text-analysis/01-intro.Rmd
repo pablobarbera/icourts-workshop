@@ -1,0 +1,139 @@
+---
+title: "Introduction to automated text analysis"
+author: Pablo Barbera, Alex Hanna
+date: March 30, 2016
+output: html_document
+---
+
+In this session we will cover automated text analysis. We will start with basic string manipulation with R.
+
+Our running example will be a random sample of 10,000 tweets mentioning hashtags related to international courts. We'll save the text of these tweets as a vector called `text'
+
+```{r}
+tweets <- read.csv("../datasets/icourts-tweets.csv", stringsAsFactors=F)
+head(tweets)
+text <- tweets$text
+```
+
+R stores the basic string in a character vector. `length` gets the number of items in the vector, while `nchar` is the number of characters in the vector.
+
+```{r}
+length(text)
+text[1]
+nchar(text[1])
+```
+
+Note that we can work with multiple strings at once.
+
+```{r}
+nchar(text[1:10])
+sum(nchar(text[1:10]))
+```
+
+As we will see later, it is often convenient to convert all words to lowercase or uppercase.
+
+```{r}
+tolower(text[1])
+toupper(text[1])
+```
+
+We can grab substrings with `substr`. The first argument is the string, the second is the beginning index (starting from 1), and the third is final index.
+
+```{r}
+substr(text[1], 1, 2)
+substr(text[1], 1, 10)
+```
+
+This is useful when working with date strings as well:
+
+```{r}
+dates <- c("2015/01/01", "2014/12/01")
+substr(dates, 1, 4) # years
+substr(dates, 6, 7) # months
+```
+
+We can split up strings by a separator using `strsplit`. If we choose space as the separator, this is in most cases equivalent to splitting into words.
+
+```{r}
+strsplit(text[1], " ")
+```
+
+Let's dit into the data a little bit more. Given the construction of the dataset, we can expect that there will be many tweets mentioning relevant hashtags, such as #ICC, We can use the `grep` command to identify these. `grep` returns the index where the word occurs.
+
+```{r}
+grep('#ICC', text[1:10])
+```
+
+`grepl` returns `TRUE` or `FALSE`, indicating whether each element of the character vector contains that particular pattern.
+
+```{r}
+grepl('#ICC', text[1:10])
+```
+
+Going back to the full dataset, we can use the results of `grep` to get particular rows. First, check how many tweets mention the hashtag "#ICC".
+```{r}
+nrow(tweets)
+grep('#ICC', tweets$text[1:10])
+length(grep('#ICC', tweets$text))
+
+```
+
+It is important to note that matching is case-sensitive. You can use the `ignore.case` argument to match to a lowercase version.
+
+```{r}
+nrow(tweets)
+length(grep('#ICC', tweets$text))
+length(grep('#ICC', tweets$text, ignore.case = TRUE))
+```
+
+Another useful tool to work with text data is called "regular expression". You can learn more about regular expressions [here](http://www.zytrax.com/tech/web/regex.htm). Regular expressions let us develop complicated rules for both matching strings and extracting elements from them. 
+
+For example, we could look at tweets that mention more than one hashtag using the operator "|" (equivalent to "OR")
+
+```{r}
+nrow(tweets)
+length(grep('#ICC|#CPI', tweets$text, ignore.case=TRUE))
+```
+
+We can also use question marks to indicate optional characters.
+
+```{r}
+nrow(tweets)
+length(grep('courts?', tweets$text, ignore.case=TRUE))
+```
+
+Other common expression patterns are:
+
+- `.` matches any character, `^` and `$` match the beginning and end of a string.  
+- Any character followed by `{3}`, `*`, `+` is matched exactly 3 times, 0 or more times, 1 or more times.  
+- `[0-9]`, `[a-zA-Z]`, `[:alnum:]` match any digit, any letter, or any digit and letter.
+- Special characters such as `.`, `\`, `(` or `)` must be preceded by a backslash.  
+- See `?regex` for more details.
+
+Another function that we will use is `gsub`, which replaces a pattern (or a regular expression) with another string:
+
+```{r}
+gsub('RT @[0-9_A-Za-z]+', 'USERNAME', text[1])
+```
+
+To extract a pattern, and not just replace, use parentheses and choose the option `repl="\\1"`:
+
+```{r}
+gsub('RT @([0-9_A-Za-z]+):.*', text[1], repl="\\1")
+
+```
+
+Now let's try to identify what tweets are probably not related to international courts. For example, how many tweets mention `cricket'?
+
+```{r}
+nrow(tweets)
+length(grep('cricket', tweets$text, ignore.case=TRUE))
+```
+
+Let's assume we want to get rid of these. How would we do it? First, let's create a new column to the data frame that has value `TRUE` for tweets that mention this keyword and `FALSE` otherwise. Then, we can keep the rows with value `TRUE`.
+
+```{r}
+tweets$cricket <- grepl('cricket', tweets$text, ignore.case=TRUE)
+table(tweets$cricket)
+tweets.subset <- tweets[tweets$cricket==FALSE, ]
+```
