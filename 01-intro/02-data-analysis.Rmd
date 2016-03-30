@@ -70,7 +70,7 @@ sum(fb$likes_count > 25) / nrow(fb)
 Let's make a new data frame consisting of just posts that contain pictures.
 
 ```{r}
-pictures <- fb[fb$type=="photo",]
+pictures <- fb[fb$type=="photo", ]
 nrow(pictures) # how many rows in new data frame
 summary(pictures) # summarize all variables in data frame
 ```
@@ -97,3 +97,10 @@ pq <- p + geom_point() + geom_line() +
 pq
 
 ```
+
+### Download data in html format
+
+```{r}
+google <- readLines("http://www.google.com")
+```
+
